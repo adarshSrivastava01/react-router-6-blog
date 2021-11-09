@@ -12,7 +12,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home/*" element={<Home />} />
+          <Route path="/home/*" element={<Home />}>
+            <Route path="new-team" element={<h1>Hola, We are Barcelona</h1>} />
+          </Route>
           <Route
             path="/players"
             element={<Players players={playersData.data} />}
