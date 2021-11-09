@@ -19,7 +19,7 @@ const Player = () => {
   return (
     <div className={classes.player__card}>
       <h1 className={classes.player__card__heading}>
-        Player Id: {params.playerId}
+        Player Id: {params?.playerId}
       </h1>
       <h1 className={classes.player__card__heading}>
         Player Name: {player?.name}
