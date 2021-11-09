@@ -1,5 +1,5 @@
 import MainNavigation from "./components/MainNavigation/MainNavigation";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Redirect } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Players from "./components/Players/Players";
 import Player from "./components/Player/Player";
@@ -11,6 +11,9 @@ function App() {
       <MainNavigation />
       <main>
         <Routes>
+          <Route path="/" exact>
+            <Redirect to="/home" />
+          </Route>
           <Route path="/home" element={<Home />} />
           <Route
             path="/players"
